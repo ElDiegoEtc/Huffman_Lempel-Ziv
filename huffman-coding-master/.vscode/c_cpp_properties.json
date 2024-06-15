@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "windows-g++-x64",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "cStandard": "${default}",
+      "cppStandard": "${default}",
+      "intelliSenseMode": "windows-g++-x64",
+      "compilerPath": "C:/msys64/ucrt64/bin/g++.exe"
+    }
+  ],
+  "version": 4
+}
