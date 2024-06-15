@@ -1,4 +1,5 @@
 #include <iostream>
+#include <chrono>
 #include "huffman.h"
 using namespace std;
 
@@ -24,7 +25,7 @@ int main(int argc, char *argv[])
 		tiempo_total += elapsed.count();
 	}
 	float avg_time = tiempo_total/20;
-	cout << "Tiempo promedio (20 iteraciones): " << avg_time << "nanoseg.";
+	cout << "Tiempo promedio (20 iteraciones): " << avg_time << "ns";
 	cout << endl;
 	return 0;
 }

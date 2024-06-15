@@ -39,7 +39,7 @@ protected:
 	priority_queue<node_ptr, vector<node_ptr>, compare> pq;									//priority queue of frequency from high to low
 	void create_node_array();																
 	void traverse(node_ptr, string);														//traverse the huffman tree and get huffman code for a character
-	int binary_to_decimal(string&);															//convert a 8-bit 0/1 string of binary code to a decimal integer 
+	int binary_to_decimal(const string&);															//convert a 8-bit 0/1 string of binary code to a decimal integer 
 	string decimal_to_binary(int);															//convert a decimal integer to a 8-bit 0/1 string of binary code
 	inline void build_tree(string&, char);													//build the huffman tree according to information from file 
 

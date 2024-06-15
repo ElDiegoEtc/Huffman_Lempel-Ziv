@@ -23,7 +23,7 @@ void huffman::traverse(node_ptr node, string code)
 	}
 }
 
-int huffman::binary_to_decimal(string& in)
+int huffman::binary_to_decimal(const string& in)
 {
 	int result = 0;
 	for (int i = 0; i < in.size(); i++)
@@ -128,7 +128,7 @@ void huffman::coding_save()
 	{//get all characters and their huffman codes for output
 		node_ptr current = temp.top();
 		in += current->id;
-		s.assign(127 - current->code.size(), '0'); 											//set the codes with a fixed 128-bit string form[000¡­¡­1 + real code]
+		s.assign(127 - current->code.size(), '0'); 											//set the codes with a fixed 128-bit string form[000ï¿½ï¿½ï¿½ï¿½1 + real code]
 		s += '1';																			//'1' indicates the start of huffman code
 		s.append(current->code);
 		in += (char)binary_to_decimal(s.substr(0, 8));										
@@ -184,7 +184,7 @@ void huffman::recreate_huffman_tree()
 		}
 		int j = 0;
 		while (h_code_s[j] == '0')
-		{//delete the added '000¡­¡­1' to get the real huffman code
+		{//delete the added '000ï¿½ï¿½ï¿½ï¿½1' to get the real huffman code
 			j++;
 		}
 		h_code_s = h_code_s.substr(j + 1);
