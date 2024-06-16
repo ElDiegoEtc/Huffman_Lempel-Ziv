@@ -197,7 +197,7 @@ string LZ78(string input, int option)
 	return "";
 }
 int main() {
-    string input = "alabaralaalabarda";
+    string input = "alabar_a_la_alabarda";
     
     // Modo 1: Compresión
     string compressed = LZ78(input, 1);
