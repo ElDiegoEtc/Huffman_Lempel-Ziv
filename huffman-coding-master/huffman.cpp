@@ -1,11 +1,12 @@
 #include "huffman.h"
+#include <iostream>
 
 void huffman::create_node_array()
 {
-	for (int i = 0; i < 128; i++)
+	for (int i = 0; i < 256; i++)
 	{
 		node_array[i] = new huffman_node;
-		node_array[i]->id = i;
+		node_array[i]->id = static_cast<char>(i);
 		node_array[i]->freq = 0;
 	}
 }
@@ -75,23 +76,35 @@ huffman::huffman(string in, string out)
 	out_file_name = out;
 	create_node_array();
 }
-void huffman::create_pq()
-{
-	in_file.open(in_file_name, ios::in);
-	in_file.get(id);
-	while (!in_file.eof())
-	{
-		node_array[id]->freq++;
-		in_file.get(id);
-	}
-	in_file.close();
-	for (int i = 0; i < 128; i++)
-	{
-		if (node_array[i]->freq)
-		{
-			pq.push(node_array[i]);
-		}
-	}
+void huffman::create_pq() {
+    in_file.open(in_file_name, ios::in);
+    if (!in_file.is_open()) {
+        std::cerr << "Error al abrir el archivo de entrada: " << in_file_name << std::endl;
+        return;
+    }
+
+    // Lee el archivo de entrada y actualiza las frecuencias en node_array
+    while (in_file.get(id)) {
+        // Verifica que id esté dentro del rango válido
+        if (id >= 0 && id < 256) {
+            if (node_array[id] != nullptr) {
+                node_array[id]->freq++;
+            } else {
+                std::cerr << "Error: puntero nulo en node_array[" << static_cast<int>(id) << "]" << std::endl;
+            }
+        } else {
+            std::cerr << "Error: id fuera de los límites, id = " << static_cast<int>(id) << std::endl;
+        }
+    }
+
+    in_file.close();
+
+    // Insertar nodos con frecuencia > 0 en la cola de prioridad
+    for (int i = 0; i < 256; i++) {
+        if (node_array[i]->freq > 0) {
+            pq.push(node_array[i]);
+        }
+    }
 }
 
 void huffman::create_huffman_tree()
