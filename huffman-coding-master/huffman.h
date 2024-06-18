@@ -23,7 +23,7 @@ typedef huffman_node* node_ptr;
 class huffman
 {
 protected:
-	node_ptr node_array[128];																//array for 128characters in the Ascii Table
+	node_ptr node_array[256];																//array for 128characters in the Ascii Table
 	fstream in_file, out_file;
 	node_ptr child, parent, root;
 	char id;
