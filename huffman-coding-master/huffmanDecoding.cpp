@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			h.decoding_save();
 		}
 		auto end = std::chrono::high_resolution_clock::now();
-		std::chrono::nanoseconds elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
+		std::chrono::milliseconds elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 		tiempo_total += elapsed.count();
 	}
 	float avg_time = tiempo_total/20;
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     // If the file is newly created, add headers
     csv_file.seekp(0, ios::end);
     if (csv_file.tellp() == 0) {
-        csv_file << "Tiempo promedio(ms),Archivo Codificado(bytes),Archivo Decodificado(bytes)" << endl;
+        csv_file << "Tiempo promedio(milliseconds),Archivo Codificado(bytes),Archivo Decodificado(bytes)" << endl;
     }
 
     csv_file << avg_time << "," << input_size << "," << output_size << endl;

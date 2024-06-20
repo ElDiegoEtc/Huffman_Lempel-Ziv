@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
         lz77.decompress(compressedFileName, decompressedFileName);
 
         auto end = std::chrono::high_resolution_clock::now();
-        std::chrono::microseconds elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        std::chrono::milliseconds elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
         tiempo_total += elapsed.count();
     }
     double avg_time = tiempo_total / 20;
@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
     // If the file is newly created, add headers
     csv_file.seekp(0, std::ios::end);
     if (csv_file.tellp() == 0) {
-        csv_file << "Tiempo promedio(ms),Archivo Codificado(bytes),Archivo Descomprimido(bytes)" << std::endl;
+        csv_file << "Tiempo promedio(milliseconds),Archivo Codificado(bytes),Archivo Descomprimido(bytes)" << std::endl;
     }
 
     csv_file << avg_time << "," << input_size << "," << output_size << std::endl;
