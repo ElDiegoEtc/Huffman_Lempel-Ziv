@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
     float tiempo_total = 0;
     
     LZ77 lz77(0, 0); // Los tamaños de ventana y buffer no son necesarios para la descompresión
-    for (int i = 0; i <= 1; i++)
+    for (int i = 0; i <= 20; i++)
     {
         auto start = std::chrono::high_resolution_clock::now();
 

@@ -1,0 +1,28 @@
+Nombre,Tamaño(mb),Tiempo promedio(milliseconds),Archivo Original(bytes),Archivo Codificado(bytes)
+dna,5,54.75,5191874,1445341
+dna,10,109.1,10352246,2866719
+dna,20,221.4,20864234,5777121
+dna,30,331.9,31414728,8703305
+dna,40,444.15,41992787,11604654
+dna,50,555.95,52428800,14484012
+Nombre,Tamaño(mb),Tiempo promedio(milliseconds),Archivo Original(bytes),Archivo Codificado(bytes)
+proteins,5,62.3,5263016,2792747
+proteins,10,123.45,10490082,5552808
+proteins,20,248.4,21001693,11128019
+proteins,30,368.5,31463349,16680151
+proteins,40,486.5,41973062,22210848
+proteins,50,605.35,52428800,27714795
+Nombre,Tamaño(mb),Tiempo promedio(milliseconds),Archivo Original(bytes),Archivo Codificado(bytes)
+dblp.xml,5,65.45,5211088,3421486
+dblp.xml,10,119.1,10531063,4189971
+dblp.xml,20,225.7,21015909,6707920
+dblp.xml,30,333.75,31464262,8684806
+dblp.xml,40,440.9,41930490,12030508
+dblp.xml,50,553.8,52428800,15520815
+Nombre,Tamaño(mb),Tiempo promedio(milliseconds),Archivo Original(bytes),Archivo Codificado(bytes)
+original,5,61.75,5052296,2881270
+original,10,121.55,10104592,5761348
+original,20,179.65,15156888,8641425
+original,30,360.45,30313776,17281658
+original,40,477.2,40418368,23041813
+original,50,597.95,50522960,28801969

@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	}
 	float tiempo_total = 0;
 
-	for (int i = 1; i <= 10; i++)
+	for (int i = 0; i <= 20; i++)
 	{
 		auto start = std::chrono::high_resolution_clock::now();
 		huffman h(argv[1], argv[2]);
@@ -57,10 +57,10 @@ int main(int argc, char *argv[])
     // If the file is newly created, add headers
     csv_file.seekp(0, ios::end);
     if (csv_file.tellp() == 0) {
-        csv_file << "Tiempo promedio(milliseconds),Archivo Codificado(bytes),Archivo Decodificado(bytes)" << endl;
+        csv_file << "Nombre,Tamaño(MB),Tiempo promedio(milliseconds),Archivo Codificado(bytes),Archivo Decodificado(bytes)" << endl;
     }
 
-    csv_file << avg_time << "," << input_size << "," << output_size << endl;
+    csv_file <<"x"<<","<<"z"<<","<< avg_time << "," << input_size << "," << output_size << endl;
     csv_file.close();
 
     return 0;

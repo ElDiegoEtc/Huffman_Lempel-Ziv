@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
     float tiempo_total = 0;
 
     LZ77 lz77(windowSize, lookaheadBufferSize);
-    for (int i = 1; i <= 1; i++)
+    for (int i = 0; i <= 20; i++)
     {
         auto start = std::chrono::high_resolution_clock::now();
         try {
