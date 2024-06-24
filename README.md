@@ -31,3 +31,6 @@ Instrucciones de ejecucion (windows):
 
 3) Para la Descompresion, se ingresa el ejecutable para Descomprimir, los valores de ventanas, los valores para el buffer, el archivo de entrada comprimido .lz77, el archivo de salida descomprimido .txt
     ./Decompress dnaC.lz77 dnaD.lz77
+
+
+Informe y resultados de experimentacion disponibles en https://docs.google.com/document/d/1zloc07YZssghGaOkkyCtiwIFmCIBjgtVcl_dJ9eWIOw/edit?usp=sharing
